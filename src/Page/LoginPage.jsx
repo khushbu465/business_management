@@ -23,7 +23,7 @@ const LoginPage = () => {
                     password: formData.password,
                 }
 
-                const url = import.meta.env.VITE_APP_BASEURL + "patients/update";
+                const url = import.meta.env.VITE_APP_BASEURL + "adminusers/login";
                 const response = await fetch(url, {
                     method: "POST",
                     headers: {
