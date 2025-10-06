@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        username: "M14", password: "12345"
+        username: "m14", password: "12345"
     });
     const [loading, setLoading] = useState();
     const handleChange = (e) => {
@@ -19,8 +19,8 @@ const LoginPage = () => {
             try {
                 setLoading(true)
                 const payload = {
-                    username: formData.username,
-                    password: formData.password,
+                    username: "m14",
+                    pwd: "12345",
                 }
 
                 const url = import.meta.env.VITE_APP_BASEURL + "adminusers/login";
@@ -32,10 +32,10 @@ const LoginPage = () => {
                     },
                     body: JSON.stringify(payload),
                 });
-
-                if (response.status === 1) {
+                const results = await response.json();
+                if (results.status === 1) {
                     const token = results.data.token;
-                    const userID = btoa(results.data._id)
+                    const userID = results.data.name;
                     localStorage.setItem("token", token);
                     localStorage.setItem("user", userID);
                     navigate('/dashboard')
