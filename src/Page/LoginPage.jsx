@@ -38,6 +38,7 @@ const LoginPage = () => {
                     const userID = results.data.name;
                     localStorage.setItem("token", token);
                     localStorage.setItem("user", userID);
+                    sessionStorage.setItem("token", token);
                     navigate('/dashboard')
                     toast.success(response.message)
                     setFormData({
