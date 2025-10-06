@@ -18,8 +18,6 @@
 
 .account-pages {
     background-image: url('https://img.freepik.com/free-vector/winter-blue-pink-gradient-background-vector_53876-117275.jpg?semt=ais_hybrid&w=740&q=80');
-
-    /* background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20250512/pngtree-blue-gradient-soft-background-vector-image_17280771.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,16 +32,18 @@
     font-size: 14px;
 }
 
-.bg_layer {
-    background: rgba(48, 195, 232, .21);
-}
-
 .login_box {
     margin-top: 120px !important;
 }
 
 .card {
     border: none !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(9px) !important;
+    -webkit-backdrop-filter: blur(9px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .bg_layer .card {
@@ -159,7 +159,7 @@ input {
 .gradient_button {
     background: linear-gradient(90deg, #4de1e2, #308fe8);
     color: #fff !important;
-    font-weight: bold !important;
+    font-weight: 500 !important;
     padding: 7px 40px !important;
     border: none !important;
     border-radius: 15px !important;
@@ -180,15 +180,6 @@ input {
     background-size: cover;
 }
 
-.dashboard_page .card {
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
 .dashboard_page img {
     height: 240px;
@@ -201,10 +192,10 @@ input {
 }
 
 .topBgImgHere {
-    background-image: url('https://t3.ftcdn.net/jpg/03/29/23/30/360_F_329233013_7ib3R8gMXEBmT9Cb47CPPGshv3zVsaHp.jpg');
-    height: 220px;
+    background-image: url('./banner.png');
+    height: 250px;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     border-radius: 10px;
 }
@@ -214,9 +205,69 @@ input {
     font-family: "Poppins", sans-serif;
 }
 
-.lightLayer {
+.form-select {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Poppins", sans-serif;
+    border-radius: 12px !important;
+    padding: .475rem .75rem !important;
+}
+
+.form-select option {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.css-hlgwow {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.css-1nmdiq5-menu {
+    font-family: "Poppins", sans-serif;
+}
+
+.was-validated .its_require .css-13cymwt-control {
+    border-color: #f46a6a !important;
+    padding-right: calc(1.5em + 0.94rem);
+    background-image: url('https://as1.ftcdn.net/v2/jpg/01/34/49/84/1000_F_134498415_Dj7LhdJohIBUgwwYMXqsrUryvaN6VK1Z.jpg');
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.235rem) center;
+    background-size: calc(0.75em + 0.47rem) calc(0.75em + 0.47rem);
+}
+
+.css-13cymwt-control {
+    border-radius: 12px !important;
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+}
+
+.was-validated .form-select:valid:not([multiple]):not([size]),
+.was-validated .form-select:valid:not([multiple])[size="1"],
+.form-select.is-valid:not([multiple]):not([size]),
+.form-select.is-valid:not([multiple])[size="1"] {
+    background-image: none !important;
+    border-color: #ced4da !important;
+}
+
+.was-validated .form-control:valid:not([multiple]):not([size]),
+.was-validated .form-control:valid:not([multiple])[size="1"],
+.form-control.is-valid:not([multiple]):not([size]),
+.form-control.is-valid:not([multiple])[size="1"] {
+    background-image: none !important;
+    border-color: #ced4da !important;
+}
+
+.css-13cymwt-control:hover {
+    border-color: #ced4da !important;
+}
+
+/* .lightLayer {
     border-radius: 10px;
-    height: 220px;
+    height: 300px;
     padding: 60px 30px;
     background: rgba(0, 0, 0, 0.5);
-}
+} */
