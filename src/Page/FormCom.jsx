@@ -39,30 +39,36 @@ const FormCom = () => {
             try {
                 setLoading(true)
                 const payload = {
-                    client_name: formData.client_name,
-                    product_name: formData.product_name,
-                    tentative_date: formData.tentative_date,
-                    institute: formData.institute,
-                    department: formData.department,
+                    client: formData.client_name,
+                    prodcut: formData.product_name,
+                    projectStart_date: formData.tentative_date,
+                    institute_department: formData.institute,
+                    state: selectedState.label,
                 }
-                toast.success('Data saved successfully')
-                // const url = import.meta.env.VITE_APP_BASEURL + "patients/insert";
-                // const response = await fetch(url, {
-                //     method: "POST",
-                //     body: JSON.stringify(payload),
-                // });
-                // if (response.status === 1) {
-                //     toast.success(response.message)
-                //     setFormData({
-                //         client_name: '',
-                //         product_name: '',
-                //         tentative_date: '',
-                //         institute: '', department: ''
-                //     });
-                // } else {
-                //     setLoading(false)
-                //     toast.error(response.message)
-                // }
+                const url = import.meta.env.VITE_APP_BASEURL + "bmsdata/insert";
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload),
+                });
+                const results = await response.json();
+                if (results.status === 1) {
+                    toast.success(results.message)
+                    setFormData({
+                        client_name: '',
+                        product_name: '',
+                        tentative_date: '',
+                        institute: '', department: ''
+                    });
+                    setSelectedState('')
+                    setLoading(false)
+                } else {
+                    setLoading(false)
+                    toast.error(results.message)
+                }
             } catch (err) {
                 setLoading(false)
                 console.log(err)

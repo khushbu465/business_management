@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        username: "M14-technology", password: "12345"
+        username: "M14", password: "12345"
     });
     const [loading, setLoading] = useState();
     const handleChange = (e) => {
@@ -22,22 +22,31 @@ const LoginPage = () => {
                     username: formData.username,
                     password: formData.password,
                 }
-                navigate('/dashboard')
-                // const url = import.meta.env.VITE_APP_BASEURL + "patients/update";
-                // const response = await fetch(url, {
-                //     method: "POST",
-                //     body: JSON.stringify(payload),
-                // });
 
-                // if (response.status === 1) {
-                //     toast.success(response.message)
-                //     setFormData({
-                //         username: "", password: ""
-                //     });
-                // } else {
-                //     setLoading(false)
-                //     toast.error(response.message)
-                // }
+                const url = import.meta.env.VITE_APP_BASEURL + "patients/update";
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload),
+                });
+
+                if (response.status === 1) {
+                    const token = results.data.token;
+                    const userID = btoa(results.data._id)
+                    localStorage.setItem("token", token);
+                    localStorage.setItem("user", userID);
+                    navigate('/dashboard')
+                    toast.success(response.message)
+                    setFormData({
+                        username: "", password: ""
+                    });
+                } else {
+                    setLoading(false)
+                    toast.error(response.message)
+                }
             } catch (err) {
                 setLoading(false)
                 console.log(err)
