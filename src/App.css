@@ -195,12 +195,14 @@ input {
     border-radius: 12px;
 }
 
-.topBgImgHere {
-    background-image: url('./banner.png');
+.topBgImgHere img {
+    /* background-image: url('./banner.png'); */
     height: 250px;
-    background-size: cover;
+    object-fit: cover;
+    object-position: top;
+    /* background-size: cover;
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     border-radius: 10px;
 }
 

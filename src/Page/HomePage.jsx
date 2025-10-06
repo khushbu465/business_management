@@ -13,6 +13,7 @@ const HomePage = () => {
               <Card>
                 <CardBody>
                   <div class="topBgImgHere">
+                    <CardImg src="./banner.png" alt="banner"/>
                   </div>
                   <div class="form_starthere pt-3 py-lg-5 px-5">
                     <h2 className='text-center mb-4'>Welcome {user}</h2>
