@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        username: "", password: ""
+        username: "M14-technology", password: "12345"
     });
     const [loading, setLoading] = useState();
     const handleChange = (e) => {

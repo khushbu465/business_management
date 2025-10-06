@@ -14,6 +14,8 @@ const HomePage = () => {
                   <div class="topBgImgHere">
                   </div>
                   <div class="form_starthere pt-3 py-lg-5 px-5">
+                    <h2 className='text-center mb-4'>Welcome User</h2>
+                    <hr/><br/>
                     <FormCom />
                   </div>
                 </CardBody>
