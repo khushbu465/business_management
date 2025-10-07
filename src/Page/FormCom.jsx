@@ -67,7 +67,7 @@ const FormCom = () => {
                     setLoading(false)
                 } else {
                     setLoading(false)
-                    toast.error(results.message)
+                    toast.info(results.message)
                 }
             } catch (err) {
                 setLoading(false)
