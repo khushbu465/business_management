@@ -18,14 +18,7 @@ const AllRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<LoginPage />} />
-                <Route
-                    path='/dashboard'
-                    element={
-                        <ProtectedRoute>
-                            <HomePage />
-                        </ProtectedRoute>
-                    }
-                />
+                <Route path='/dashboard' element={<ProtectedRoute>   <HomePage /></ProtectedRoute>} />
             </Routes>
         </BrowserRouter>
     )

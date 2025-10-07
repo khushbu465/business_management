@@ -63,14 +63,14 @@ const LoginPage = () => {
                 <div className='bg_layer'>
                     <Container >
                         <Row className='d-flex justify-content-center content-middle align-middle ' style={{ height: '100vh' }}>
-                            <Col lg={6} xl={6} md={12} sm={12} className=" col-12">
+                            <Col lg={5} xl={5} md={12} sm={12} className=" col-12 loginboX_startHere">
                                 <Card className='login_box'>
                                     <CardBody className='p-0'>
                                         <div className="add_on_mobile">
                                             <div className=" overflow-hidden " >
                                                 <Row className="">
                                                     <Col xs={12} className="text-center">
-                                                        <h2 className="fw-bold text-dark"> Login</h2>
+                                                        <h2 className="fw- text-dark"> Login</h2>
                                                     </Col>
                                                 </Row>
                                                 <div className="pt-0 ">
