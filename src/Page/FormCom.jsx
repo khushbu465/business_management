@@ -120,26 +120,19 @@ const FormCom = () => {
                         <FormGroup>
                             <Label for="dob"> Tentative  Date of Project Starting <span className='text-danger'>*</span></Label>
                             <Input type="date"
-                                className={`form-control ${dateError ? 'is-invalid' : ''}`} placeholder=" Tentative Date" required
+                                className={`form-control dareplaceholder ${dateError ? 'is-invalid' : ''}`} placeholder=" Tentative Date" required
                                 value={formData.tentative_date} name="tentative_date"
                                 onChange={(e) => { setFormData((pre) => ({ ...pre, tentative_date: e.target.value })); setDateError('') }} />
 
                             <small className="text-danger">{dateError ? dateError : ''}</small>
                         </FormGroup>
                     </Col>
+
                     <Col lg={6} md={12} >
                         <FormGroup>
-                            <Label> Institute/Department <span className='text-danger'>*</span></Label>
-                            <Input type="text" name="institute" value={formData.institute} onChange={handleChange} placeholder="Enter Institute/Department Name" required />
-                            <FormFeedback>This field is required</FormFeedback>
-                        </FormGroup>
-                    </Col>
-                    <Col lg={6} md={12} >
-                        <FormGroup>
-                            <Label> State <span className='text-danger'>*</span></Label>
+                            <Label> State </Label>
                             <Select
                                 value={selectedState ? selectedState : ''}
-                                className={error ? "its_require" : ''}
                                 name="state_province"
                                 id="state"
                                 options={stateList}
@@ -148,12 +141,17 @@ const FormCom = () => {
                                     setError('');
                                 }}
                                 placeholder="Select State"
-                                isSearchable={true} required
+                                isSearchable={true} 
                             />
-                            <small className='text-danger'>{error ? error : ''}</small>
                         </FormGroup>
                     </Col>
-
+                    <Col lg={6} md={12} >
+                        <FormGroup>
+                            <Label> Institute/Department </Label>
+                            <Input type="text" name="institute" value={formData.institute} onChange={handleChange} placeholder="Enter Institute/Department Name" />
+                            <FormFeedback>This field is required</FormFeedback>
+                        </FormGroup>
+                    </Col>
                 </Row>
                 <FormGroup className="text-center add_new mt-5">
                     {
