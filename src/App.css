@@ -36,14 +36,14 @@
     margin-top: 120px !important;
 }
 
-.card {
+.loginboX_startHere .card {
     border: none !important;
-    background: rgba(255, 255, 255, 0.15) !important;
+    /* background: rgba(255, 255, 255, 0.15) !important;
     border-radius: 16px !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(9px) !important;
     -webkit-backdrop-filter: blur(9px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important; */
 }
 
 .bg_layer .card {
@@ -131,7 +131,7 @@
 }
 
 .login_box input {
-    padding: .6rem 0.75rem 0.9rem 0.75rem !important;
+    padding: .5rem 0.75rem 0.5rem 0.75rem !important;
     border-radius: 15px !important;
     font-family: "Poppins", sans-serif;
 }
