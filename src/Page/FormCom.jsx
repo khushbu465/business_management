@@ -40,7 +40,7 @@ const FormCom = () => {
                 setLoading(true)
                 const payload = {
                     client: formData.client_name,
-                    prodcut: formData.product_name,
+                    product: formData.product_name,
                     projectStart_date: formData.tentative_date,
                     institute_department: formData.institute,
                     state: selectedState.label,

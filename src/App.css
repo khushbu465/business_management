@@ -139,9 +139,10 @@
 .form-control::placeholder {
     font-family: "Poppins", sans-serif;
 }
-.dareplaceholder::placeholder{
-     font-family: "Poppins", sans-serif;
-     font-size: 14px !important;
+
+.dareplaceholder::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px !important;
 }
 
 .login_form .form-label {
